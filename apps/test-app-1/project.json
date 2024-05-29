@@ -4,65 +4,6 @@
   "sourceRoot": "apps/test-app-1/src",
   "projectType": "application",
   "tags": [],
-  "targets": {
-    "build": {
-      "executor": "@nx/vite:build",
-      "outputs": ["{options.outputPath}"],
-      "defaultConfiguration": "production",
-      "options": {
-        "outputPath": "dist/apps/test-app-1"
-      },
-      "configurations": {
-        "development": {
-          "mode": "development"
-        },
-        "production": {
-          "mode": "production"
-        }
-      }
-    },
-    "serve": {
-      "executor": "@nx/vite:dev-server",
-      "defaultConfiguration": "development",
-      "options": {
-        "buildTarget": "test-app-1:build"
-      },
-      "configurations": {
-        "development": {
-          "buildTarget": "test-app-1:build:development",
-          "hmr": true
-        },
-        "production": {
-          "buildTarget": "test-app-1:build:production",
-          "hmr": false
-        }
-      }
-    },
-    "preview": {
-      "executor": "@nx/vite:preview-server",
-      "defaultConfiguration": "development",
-      "options": {
-        "buildTarget": "test-app-1:build"
-      },
-      "configurations": {
-        "development": {
-          "buildTarget": "test-app-1:build:development"
-        },
-        "production": {
-          "buildTarget": "test-app-1:build:production"
-        }
-      }
-    },
-    "test": {
-      "executor": "@nx/vite:test",
-      "outputs": ["{options.reportsDirectory}"],
-      "options": {
-        "passWithNoTests": true,
-        "reportsDirectory": "../../coverage/apps/test-app-1"
-      }
-    },
-    "lint": {
-      "executor": "@nx/eslint:lint"
-    }
-  }
+  "// targets": "to see all targets run: nx show project test-app-1 --web",
+  "targets": {}
 }

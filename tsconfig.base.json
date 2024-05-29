@@ -15,7 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@crystal-bug/test-lib-1": ["test-lib-1/src/index.ts"]
+      "@crystal-bug/test-lib-1": ["libs/test-lib-1/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
