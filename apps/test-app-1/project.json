@@ -1,15 +1,16 @@
 {
-  "name": "crystal-bug",
+  "name": "test-app-1",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "apps/crystal-bug/src",
+  "sourceRoot": "apps/test-app-1/src",
   "projectType": "application",
+  "tags": [],
   "targets": {
     "build": {
       "executor": "@nx/vite:build",
       "outputs": ["{options.outputPath}"],
       "defaultConfiguration": "production",
       "options": {
-        "outputPath": "dist/apps/crystal-bug"
+        "outputPath": "dist/apps/test-app-1"
       },
       "configurations": {
         "development": {
@@ -24,15 +25,15 @@
       "executor": "@nx/vite:dev-server",
       "defaultConfiguration": "development",
       "options": {
-        "buildTarget": "crystal-bug:build"
+        "buildTarget": "test-app-1:build"
       },
       "configurations": {
         "development": {
-          "buildTarget": "crystal-bug:build:development",
+          "buildTarget": "test-app-1:build:development",
           "hmr": true
         },
         "production": {
-          "buildTarget": "crystal-bug:build:production",
+          "buildTarget": "test-app-1:build:production",
           "hmr": false
         }
       }
@@ -41,14 +42,14 @@
       "executor": "@nx/vite:preview-server",
       "defaultConfiguration": "development",
       "options": {
-        "buildTarget": "crystal-bug:build"
+        "buildTarget": "test-app-1:build"
       },
       "configurations": {
         "development": {
-          "buildTarget": "crystal-bug:build:development"
+          "buildTarget": "test-app-1:build:development"
         },
         "production": {
-          "buildTarget": "crystal-bug:build:production"
+          "buildTarget": "test-app-1:build:production"
         }
       }
     },
@@ -57,16 +58,11 @@
       "outputs": ["{options.reportsDirectory}"],
       "options": {
         "passWithNoTests": true,
-        "reportsDirectory": "../../coverage/apps/crystal-bug"
+        "reportsDirectory": "../../coverage/apps/test-app-1"
       }
     },
     "lint": {
-      "executor": "@nx/linter:eslint",
-      "outputs": ["{options.outputFile}"],
-      "options": {
-        "lintFilePatterns": ["apps/crystal-bug/**/*.{ts,tsx,js,jsx}"]
-      }
+      "executor": "@nx/eslint:lint"
     }
-  },
-  "tags": []
+  }
 }
