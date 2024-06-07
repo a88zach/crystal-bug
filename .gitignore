@@ -48,3 +48,4 @@ testem.log
 Thumbs.db
 
 .nx/cache
+.nx/workspace-data
